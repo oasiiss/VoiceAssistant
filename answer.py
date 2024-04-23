@@ -47,7 +47,7 @@ def CreateImage(prompt):
     openai.api_key = api_key
     try:
         response = openai.Image.create(
-            model="dall-e-2",
+            model="dall-e-3",
             prompt=prompt,
             n=1,
             size="1024x1024"
