@@ -1,7 +1,7 @@
 import sys, time, threading, requests, pygame, os, threading, time, sys
 from PyQt5.QtCore import QThread, pyqtSignal, Qt
 from PyQt5.QtWidgets import QApplication, QLabel, QWidget
-from PyQt5.QtGui import QMovie
+from PyQt5.QtGui import QMovie, QIcon
 import tkinter as tk
 from PIL import Image, ImageTk
 from io import BytesIO
@@ -148,6 +148,7 @@ class AssistantUi(QWidget):
         self.setGeometry(100, 100, 500, 500)
         self.setWindowTitle('Sesli Asistan')
         self.setFixedSize(500, 420)
+        self.setWindowIcon(QIcon("media/icon.png"))
         self.movie = QMovie("media/circle.gif")
         self.movie_label = QLabel(self)
         self.movie_label.setAlignment(Qt.AlignCenter)
